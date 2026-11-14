@@ -110,7 +110,7 @@ EVT供电测试使用确认能持续提供 5 V / 2 A 的电源与短线。当前
 
 F1在23°C的保持电流为1.5A，40°C为1.3A，最大恢复后电阻0.12Ω；按 855 mA 估算其压降约 0.10 V，线缆压降另计。保险丝不限制正常工作电流，也不替代USB取电能力识别。现版仅有CC下拉，没有Type-C电流档位检测、PD协商或专用浪涌限制，通用USB端口兼容性与插拔浪涌仍需验证。
 
-SY8089A1 的 IN、EN 接 5V_SYS。L1 采用 SRP3020TA-1R0M（C2046926），1 µH，额定温升电流 4 A、饱和电流 5 A。输入 C1、C3 各 10 µF，输出 C2 为 22 µF。反馈分压采用 R12 = 100 kΩ（C122538）、R13 = 23.2 kΩ（C861244），两颗均为 ±0.1% 的 0603 电阻，C4 = 22 pF 并联于 R12。按 591–609 mV 的反馈基准及电阻初始公差估算，输出静态范围约 3.13–3.24 V。样机验证时，测量 Type-C 插拔的 IN 过冲及 LCD VCC 峰值，LCD VCC 不得超过 3.30 V。Wi-Fi 峰值负载时，ESP32-S3 供电脚最低电压不得低于 3.0 V。结合直流偏压核对电容的有效容量。
+SY8089A1 的 IN、EN 接 5V_SYS。L1 采用 MetalLions MCMB-0420-1R0MT（C54195912），1 µH，典型温升电流 6 A、饱和电流 7 A。输入 C1、C3 各 10 µF，输出 C2 为 22 µF。反馈分压采用 R12 = 100 kΩ（C122538）、R13 = 23.2 kΩ（C861244），两颗均为 ±0.1% 的 0603 电阻，C4 = 22 pF 并联于 R12。按 591–609 mV 的反馈基准及电阻初始公差估算，输出静态范围约 3.13–3.24 V。样机验证时，测量 Type-C 插拔的 IN 过冲及 LCD VCC 峰值，LCD VCC 不得超过 3.30 V。Wi-Fi 峰值负载时，ESP32-S3 供电脚最低电压不得低于 3.0 V。结合直流偏压核对电容的有效容量。
 
 ## PCB布局边界
 
@@ -153,6 +153,6 @@ SY8089A1 的 IN、EN 接 5V_SYS。L1 采用 SRP3020TA-1R0M（C2046926），1 µH
 - [GMT154-06 规格书](https://robu-prod-media.s3.ap-south-1.amazonaws.com/uploads/2024/11/1-%E6%A8%A1%E7%BB%84%E8%A7%84%E6%A0%BC%E4%B9%A6-GMT154-06-V1.pdf)
 - [讯普 TYPEC-304-BCP16 原厂图纸](https://datasheet.lcsc.com/datasheet/pdf/4b393401c1c18e26279885eb6b7bf134.pdf?productCode=C720629)
 - [Bourns MF-MSMF保险丝规格](https://bourns.com/docs/product-datasheets/mf-msmf.pdf)
-- [Bourns SRP3020TA 电感规格](https://www.bourns.com/docs/product-datasheets/srp3020ta.pdf)
+- [MetalLions MCMB-0420 电感规格](https://atta.szlcsc.com/upload/public/pdf/source/20231012/01C71B26B6B865DA7BFD9B83EFE4DD2B.pdf#page=2)
 - [乐鑫PCB布局及模组天线净空指南](https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32s3/pcb-layout-design.html)
 - [Hirose FH12-10S-0.5SH(55) 连接座规格](https://www.hirose.com/en/product/p/CL0586-0522-3-55)
